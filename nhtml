@@ -1,1 +1,22 @@
+// App.js
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import SearchPage from './components/SearchPage';
+import ProductPage from './components/ProductPage';
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/search" component={SearchPage} />
+        <Route path="/product/:id" component={ProductPage} />
+      </Switch>
+    </Router>
+  );
+}
+
+export default App;
 
